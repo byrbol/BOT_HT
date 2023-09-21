@@ -35,7 +35,7 @@ async def command_start_handler(message: Message) -> None:
     # and the target chat will be passed to :ref:`aiogram.methods.send_message.SendMessage`
     # method automatically or call API method directly via
     # Bot instance: `bot.send_message(chat_id=message.chat.id, ...)`
-    await message.answer(f"Hello, {hbold(message.from_user.full_name)}! ")
+    await message.answer(f"Hello, {hbold(message.from_user.full_name)}! Введите номер интересующей вас техники")
 
 
 @router.message()
@@ -81,7 +81,7 @@ async def echo_handler(message: types.Message) -> None:
 
 async def main() -> None:
     # Initialize Bot instance with a default parse mode which will be passed to all API calls
-    bot = Bot('6446272550:AAE_S9L6k2oZDGO0p7FUGRxH3CLTm0a2mr0', parse_mode=ParseMode.HTML)
+    bot = Bot('6361531587:AAFvV49hv8lika4tK2KJ3KvHJJamlexV5Jo', parse_mode=ParseMode.HTML)
     # And the run events dispatching
     await dp.start_polling(bot)
 
