@@ -2,7 +2,7 @@ import asyncio
 import logging
 import sys
 import psycopg2
-from aiogram import Bot, Dispatcher, Router, types
+from aiogram import Bot, Dispatcher, Router, types, F
 from aiogram.enums import ParseMode
 from aiogram.filters import CommandStart
 from aiogram.types import Message
