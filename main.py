@@ -37,7 +37,10 @@ async def command_start_handler(message: Message) -> None:
     # Bot instance: `bot.send_message(chat_id=message.chat.id, ...)`
     await message.answer(f"Hello, {hbold(message.from_user.full_name)}! Введите номер интересующей вас техники")
 
-
+@router.message(F.text == '/parking')
+async def message_handler(message: types.Message) -> None:
+    await message.answer('https://httrucks-8c4a61fead2c.herokuapp.com/parking_klient/')
+            
 @router.message()
 async def echo_handler(message: types.Message) -> None:
     number = morf_number(message.text)
