@@ -15,9 +15,10 @@ router = Router()
 dp.include_router(router)
 
 dict_rep = {'Warstat': 'Общий ремонт', 'Opony': 'Ремонт/Замена резины',
-            'Lakernia': 'Покрасочные работы', 'Myjnia': 'Была проведена мойка',
-            'TUV': 'Пройден тех. осмотр', 'Sczyba czolowa': 'Замена лобового стекла',
-            'Retarder':'Ремонт ретардера', 'Parking': 'Оказана услуга паркинга'}
+            'Lakernia': 'Покрасочные работы', 'Myjnia': 'Vойка',
+            'TUV': 'Тех. осмотр', 'Sczyba czolowa': 'Замена лобового стекла',
+            'Retarder':'Ремонт ретардера', 'Parking': 'Оказана услуга паркинга',
+            'Tacho': 'Калибровка тахо'}
 
 def morf_number(number):
     number = number.strip().upper()
