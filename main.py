@@ -15,7 +15,7 @@ router = Router()
 dp.include_router(router)
 
 dict_rep = {'Warstat': 'Общий ремонт', 'Opony': 'Ремонт/Замена резины',
-            'Lakernia': 'Покрасочные работы', 'Myjnia': 'Vойка',
+            'Lakernia': 'Покрасочные работы', 'Myjnia': 'Мойка',
             'TUV': 'Тех. осмотр', 'Sczyba czolowa': 'Замена лобового стекла',
             'Retarder':'Ремонт ретардера', 'Parking': 'Оказана услуга паркинга',
             'Tacho': 'Калибровка тахо'}
