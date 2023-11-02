@@ -49,7 +49,7 @@ async def echo_handler(message: types.Message) -> None:
         conn = psycopg2.connect(dbname='df3fc3n3ccknq7',
                                 user='nieizpksoswzhu',
                                 password='1ff06a77085ad34ef3d45529dc615d4bc59c764ce1e0b1e2320cdb97c5c29c65',
-                                host='ec2-52-215-68-14.eu-west-1.compute.amazonaws.com')
+                                host='ec2-63-33-3-25.eu-west-1.compute.amazonaws.com')
 
         cursor = conn.cursor()
 
