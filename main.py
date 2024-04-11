@@ -74,7 +74,7 @@ async def echo_handler(message: types.Message) -> None:
                   f"\n" \
                   f"Cписок выполненых работ🔧: {str(set(df['rem'].to_list()))}\n" \
                   f"\n" \
-                  f"Дата окончания ремонта🕑: {str(df['finish_date'].max())[0:10)]}"
+                  f"Дата окончания ремонта🕑: {str(df['finish_date'].max())[0:10]}"
     except:
         await message.answer('Can`t establish connection to database')
 
