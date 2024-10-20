@@ -66,7 +66,7 @@ async def echo_handler(message: types.Message) -> None:
         df = pd.DataFrame(data, columns=['number', 'type_request', 'zlic_date', 'finish_date', 'status'])
         if df.shape[0] == 0:
             mes = 'Не верный номер, либо на эту технику нет открытых заявок!🙁'
-        elif df[df['status'] == 'W naprawie'].shape[0] >= 1:
+        elif df[df['status'] == 'Otwarte'].shape[0] >= 1:
             mes = 'Техника еще в ремонте!👨‍🔧'
         else:
             df['rem'] = df['type_request'].agg(lambda x: dict_rep[x])
