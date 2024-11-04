@@ -50,10 +50,10 @@ async def message_handler(message: types.Message) -> None:
 async def echo_handler(message: types.Message) -> None:
     number = morf_number(message.text)
     try:
-        conn = psycopg2.connect(dbname='df3fc3n3ccknq7',
-                                user='nieizpksoswzhu',
-                                password='1ff06a77085ad34ef3d45529dc615d4bc59c764ce1e0b1e2320cdb97c5c29c65',
-                                host='ec2-63-33-3-25.eu-west-1.compute.amazonaws.com')
+        conn = psycopg2.connect(dbname='d8evq2pll71b18',
+                                user='ua7l6oc1o7q7an',
+                                password='p91d2bace64006648d23255b5fbf7d18b98509572fa1dd29e58952772b9b7cdd8',
+                                host='c3b50so8id8nre.cluster-czz5s0kz4scl.eu-west-1.rds.amazonaws.com')
 
         cursor = conn.cursor()
 
