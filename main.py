@@ -43,33 +43,7 @@ async def command_start_handler(message: Message) -> None:
 
 @router.message(F.text == '/parking')
 async def message_handler(message: types.Message) -> None:
-    await message.answer('https://httrucks-8c4a61fead2c.herokuapp.com/parking_klient/')
-
-
-@router.message()
-async def echo_handler(message: types.Message) -> None:
-    number = morf_number(message.text)
-    try:
-        conn = psycopg2.connect(dbname='d8evq2pll71b18',
-                                user='ua7l6oc1o7q7an',
-                                password='p91d2bace64006648d23255b5fbf7d18b98509572fa1dd29e58952772b9b7cdd8',
-                                host='c3b50so8id8nre.cluster-czz5s0kz4scl.eu-west-1.rds.amazonaws.com')
-
-        cursor = conn.cursor()
-
-        cursor.execute(f"SELECT number_text, type_request, date_zlice, date_finish_work,"
-                       f" status_text FROM polls_question WHERE number_text = '{number}'")
-        data = cursor.fetchall()
-        cursor.close()
-        conn.close()
-        mes = ''
-        df = pd.DataFrame(data, columns=['number', 'type_request', 'zlic_date', 'finish_date', 'status'])
-        if df.shape[0] == 0:
-            mes = 'Не верный номер, либо на эту технику нет открытых заявок!🙁'
-        elif df[df['status'] == 'Otwarte'].shape[0] >= 1:
-            mes = 'Техника еще в ремонте!👨‍🔧'
-        else:
-            df['rem'] = df['type_request'].agg(lambda x: dict_rep[x])
+    await 
             mes = f"Техника готова!!🤩\n" \
                   f"\n" \
                   f"Cписок выполненых работ🔧: {str(set(df['rem'].to_list()))}\n" \
